@@ -49,9 +49,9 @@ namespace Killutter.UI
             NameTextBox = new TextBox();
             DestLabel = new Label();
             DestValueLabel = new Label();
-            Save = new Button();
-            CancelButton = new Button();
-            Browse = new Button();
+            Browse = new ReaLTaiizor.Controls.Button();
+            Save = new ReaLTaiizor.Controls.Button();
+            CancelButton = new ReaLTaiizor.Controls.Button();
             DocumentsBox.SuspendLayout();
             PicturesBox.SuspendLayout();
             AudioBox.SuspendLayout();
@@ -422,59 +422,69 @@ namespace Killutter.UI
             DestValueLabel.TabIndex = 12;
             DestValueLabel.Text = "No folder selected";
             // 
-            // Save
-            // 
-            Save.BackColor = Color.FromArgb(0, 123, 255);
-            Save.FlatAppearance.BorderColor = Color.FromArgb(0, 64, 133);
-            Save.FlatAppearance.BorderSize = 3;
-            Save.FlatAppearance.MouseDownBackColor = Color.FromArgb(74, 74, 74);
-            Save.FlatAppearance.MouseOverBackColor = Color.FromArgb(74, 74, 74);
-            Save.FlatStyle = FlatStyle.Flat;
-            Save.Location = new Point(468, 430);
-            Save.Name = "Save";
-            Save.Size = new Size(94, 42);
-            Save.TabIndex = 16;
-            Save.Text = "Save";
-            Save.UseVisualStyleBackColor = false;
-            Save.Click += Save_Click_1;
-            // 
-            // CancelButton
-            // 
-            CancelButton.BackColor = Color.FromArgb(220, 53, 69);
-            CancelButton.FlatAppearance.BorderColor = Color.FromArgb(114, 28, 36);
-            CancelButton.FlatAppearance.BorderSize = 3;
-            CancelButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(74, 74, 74);
-            CancelButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(74, 74, 74);
-            CancelButton.FlatStyle = FlatStyle.Flat;
-            CancelButton.Location = new Point(579, 430);
-            CancelButton.Name = "CancelButton";
-            CancelButton.Size = new Size(94, 42);
-            CancelButton.TabIndex = 17;
-            CancelButton.Text = "Cancel";
-            CancelButton.UseVisualStyleBackColor = false;
-            // 
             // Browse
             // 
-            Browse.BackColor = Color.FromArgb(0, 123, 255);
-            Browse.FlatAppearance.BorderColor = Color.FromArgb(0, 64, 133);
-            Browse.FlatAppearance.BorderSize = 3;
-            Browse.FlatAppearance.MouseDownBackColor = Color.FromArgb(74, 74, 74);
-            Browse.FlatAppearance.MouseOverBackColor = Color.FromArgb(74, 74, 74);
-            Browse.FlatStyle = FlatStyle.Flat;
+            Browse.BackColor = Color.Transparent;
+            Browse.BorderColor = Color.FromArgb(0, 98, 204);
+            Browse.EnteredBorderColor = Color.FromArgb(0, 98, 204);
+            Browse.EnteredColor = Color.FromArgb(0, 105, 217);
+            Browse.Font = new Font("Microsoft Sans Serif", 12F);
+            Browse.Image = null;
+            Browse.ImageAlign = ContentAlignment.MiddleLeft;
+            Browse.InactiveColor = Color.FromArgb(0, 123, 255);
             Browse.Location = new Point(216, 430);
             Browse.Name = "Browse";
+            Browse.PressedBorderColor = Color.FromArgb(0, 98, 204);
+            Browse.PressedColor = Color.FromArgb(0, 98, 204);
             Browse.Size = new Size(94, 42);
             Browse.TabIndex = 18;
             Browse.Text = "Browse...";
-            Browse.UseVisualStyleBackColor = false;
-            Browse.Click += Browse_Click_1;
+            Browse.TextAlignment = StringAlignment.Center;
+            // 
+            // Save
+            // 
+            Save.BackColor = Color.Transparent;
+            Save.BorderColor = Color.FromArgb(0, 98, 204);
+            Save.EnteredBorderColor = Color.FromArgb(0, 98, 204);
+            Save.EnteredColor = Color.FromArgb(0, 105, 217);
+            Save.Font = new Font("Microsoft Sans Serif", 12F);
+            Save.Image = null;
+            Save.ImageAlign = ContentAlignment.MiddleLeft;
+            Save.InactiveColor = Color.FromArgb(0, 123, 255);
+            Save.Location = new Point(468, 430);
+            Save.Name = "Save";
+            Save.PressedBorderColor = Color.FromArgb(0, 98, 204);
+            Save.PressedColor = Color.FromArgb(0, 98, 204);
+            Save.Size = new Size(94, 42);
+            Save.TabIndex = 16;
+            Save.Text = "Save";
+            Save.TextAlignment = StringAlignment.Center;
+            // 
+            // CancelButton
+            // 
+            CancelButton.BackColor = Color.Transparent;
+            CancelButton.BorderColor = Color.FromArgb(189, 33, 48);
+            CancelButton.EnteredBorderColor = Color.FromArgb(189, 33, 48);
+            CancelButton.EnteredColor = Color.FromArgb(200, 35, 51);
+            CancelButton.Font = new Font("Microsoft Sans Serif", 12F);
+            CancelButton.Image = null;
+            CancelButton.ImageAlign = ContentAlignment.MiddleLeft;
+            CancelButton.InactiveColor = Color.FromArgb(220, 53, 69);
+            CancelButton.Location = new Point(579, 430);
+            CancelButton.Name = "CancelButton";
+            CancelButton.PressedBorderColor = Color.FromArgb(189, 33, 48);
+            CancelButton.PressedColor = Color.FromArgb(189, 33, 48);
+            CancelButton.Size = new Size(94, 42);
+            CancelButton.TabIndex = 17;
+            CancelButton.Text = "Cancel";
+            CancelButton.TextAlignment = StringAlignment.Center;
             // 
             // AddGroupControl
             // 
             BackColor = Color.FromArgb(30, 30, 30);
-            Controls.Add(Browse);
             Controls.Add(CancelButton);
             Controls.Add(Save);
+            Controls.Add(Browse);
             Controls.Add(TitleLabel);
             Controls.Add(TypesLabel);
             Controls.Add(DocumentsBox);
@@ -528,8 +538,8 @@ namespace Killutter.UI
         private TextBox NameTextBox;
         private Label DestLabel;
         private Label DestValueLabel;
-        private Button Save;
-        private Button CancelButton;
-        private Button Browse;
+        private ReaLTaiizor.Controls.Button Browse;
+        private ReaLTaiizor.Controls.Button Save;
+        private ReaLTaiizor.Controls.Button CancelButton;
     }
 }

@@ -32,15 +32,15 @@
             Watchfolder = new Label();
             Logfile = new Label();
             Logpath = new Label();
-            ChangeWatchPath = new Button();
-            ChangeLogPath = new Button();
             Foldericon = new LinkLabel();
             linkLabel1 = new LinkLabel();
-            AddGroup = new Button();
             RunAtStartup = new CheckBox();
             panel1 = new Panel();
             flowLayoutPanel1 = new FlowLayoutPanel();
             groupCard1 = new GroupCard();
+            ChangeWatchPath = new ReaLTaiizor.Controls.Button();
+            ChangeLogPath = new ReaLTaiizor.Controls.Button();
+            AddGroup = new ReaLTaiizor.Controls.Button();
             panel1.SuspendLayout();
             flowLayoutPanel1.SuspendLayout();
             SuspendLayout();
@@ -86,39 +86,6 @@
             Logpath.TabIndex = 6;
             Logpath.Text = "Path...";
             // 
-            // ChangeWatchPath
-            // 
-            ChangeWatchPath.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            ChangeWatchPath.BackColor = Color.FromArgb(0, 123, 255);
-            ChangeWatchPath.FlatAppearance.BorderColor = Color.FromArgb(0, 64, 133);
-            ChangeWatchPath.FlatAppearance.BorderSize = 3;
-            ChangeWatchPath.FlatAppearance.MouseDownBackColor = Color.FromArgb(74, 74, 74);
-            ChangeWatchPath.FlatAppearance.MouseOverBackColor = Color.FromArgb(74, 74, 74);
-            ChangeWatchPath.FlatStyle = FlatStyle.Flat;
-            ChangeWatchPath.Location = new Point(807, 21);
-            ChangeWatchPath.Name = "ChangeWatchPath";
-            ChangeWatchPath.Size = new Size(94, 42);
-            ChangeWatchPath.TabIndex = 7;
-            ChangeWatchPath.Text = "Change...";
-            ChangeWatchPath.UseVisualStyleBackColor = false;
-            ChangeWatchPath.Click += ChangeWatchPath_Click_1;
-            // 
-            // ChangeLogPath
-            // 
-            ChangeLogPath.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            ChangeLogPath.BackColor = Color.FromArgb(0, 123, 255);
-            ChangeLogPath.FlatAppearance.BorderColor = Color.FromArgb(0, 64, 133);
-            ChangeLogPath.FlatAppearance.BorderSize = 3;
-            ChangeLogPath.FlatAppearance.MouseDownBackColor = Color.FromArgb(74, 74, 74);
-            ChangeLogPath.FlatAppearance.MouseOverBackColor = Color.FromArgb(74, 74, 74);
-            ChangeLogPath.FlatStyle = FlatStyle.Flat;
-            ChangeLogPath.Location = new Point(807, 83);
-            ChangeLogPath.Name = "ChangeLogPath";
-            ChangeLogPath.Size = new Size(94, 42);
-            ChangeLogPath.TabIndex = 8;
-            ChangeLogPath.Text = "Change...";
-            ChangeLogPath.UseVisualStyleBackColor = false;
-            // 
             // Foldericon
             // 
             Foldericon.ActiveLinkColor = Color.FromArgb(48, 48, 48);
@@ -145,23 +112,6 @@
             linkLabel1.TabStop = true;
             linkLabel1.Text = "📁";
             linkLabel1.LinkClicked += LogFolderIcon_LinkClicked;
-            // 
-            // AddGroup
-            // 
-            AddGroup.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            AddGroup.BackColor = Color.FromArgb(0, 123, 255);
-            AddGroup.FlatAppearance.BorderColor = Color.FromArgb(0, 64, 133);
-            AddGroup.FlatAppearance.BorderSize = 3;
-            AddGroup.FlatAppearance.MouseDownBackColor = Color.FromArgb(74, 74, 74);
-            AddGroup.FlatAppearance.MouseOverBackColor = Color.FromArgb(74, 74, 74);
-            AddGroup.FlatStyle = FlatStyle.Flat;
-            AddGroup.Location = new Point(807, 519);
-            AddGroup.Name = "AddGroup";
-            AddGroup.Size = new Size(94, 42);
-            AddGroup.TabIndex = 11;
-            AddGroup.Text = "Add Group";
-            AddGroup.UseVisualStyleBackColor = false;
-            AddGroup.Click += AddGroup_Click_1;
             // 
             // RunAtStartup
             // 
@@ -207,19 +157,76 @@
             groupCard1.TabIndex = 0;
             groupCard1.Load += groupCard1_Load;
             // 
+            // ChangeWatchPath
+            // 
+            ChangeWatchPath.BackColor = Color.Transparent;
+            ChangeWatchPath.BorderColor = Color.FromArgb(0, 98, 204);
+            ChangeWatchPath.EnteredBorderColor = Color.FromArgb(0, 98, 204);
+            ChangeWatchPath.EnteredColor = Color.FromArgb(0, 105, 217);
+            ChangeWatchPath.Font = new Font("Microsoft Sans Serif", 12F);
+            ChangeWatchPath.Image = null;
+            ChangeWatchPath.ImageAlign = ContentAlignment.MiddleLeft;
+            ChangeWatchPath.InactiveColor = Color.FromArgb(0, 123, 255);
+            ChangeWatchPath.Location = new Point(807, 21);
+            ChangeWatchPath.Name = "ChangeWatchPath";
+            ChangeWatchPath.PressedBorderColor = Color.FromArgb(0, 98, 204);
+            ChangeWatchPath.PressedColor = Color.FromArgb(0, 98, 204);
+            ChangeWatchPath.Size = new Size(94, 42);
+            ChangeWatchPath.TabIndex = 7;
+            ChangeWatchPath.Text = "Change...";
+            ChangeWatchPath.TextAlignment = StringAlignment.Center;
+            // 
+            // ChangeLogPath
+            // 
+            ChangeLogPath.BackColor = Color.Transparent;
+            ChangeLogPath.BorderColor = Color.FromArgb(0, 98, 204);
+            ChangeLogPath.EnteredBorderColor = Color.FromArgb(0, 98, 204);
+            ChangeLogPath.EnteredColor = Color.FromArgb(0, 105, 217);
+            ChangeLogPath.Font = new Font("Microsoft Sans Serif", 12F);
+            ChangeLogPath.Image = null;
+            ChangeLogPath.ImageAlign = ContentAlignment.MiddleLeft;
+            ChangeLogPath.InactiveColor = Color.FromArgb(0, 123, 255);
+            ChangeLogPath.Location = new Point(807, 83);
+            ChangeLogPath.Name = "ChangeLogPath";
+            ChangeLogPath.PressedBorderColor = Color.FromArgb(0, 98, 204);
+            ChangeLogPath.PressedColor = Color.FromArgb(0, 98, 204);
+            ChangeLogPath.Size = new Size(94, 42);
+            ChangeLogPath.TabIndex = 8;
+            ChangeLogPath.Text = "Change...";
+            ChangeLogPath.TextAlignment = StringAlignment.Center;
+            // 
+            // AddGroup
+            // 
+            AddGroup.BackColor = Color.Transparent;
+            AddGroup.BorderColor = Color.FromArgb(0, 98, 204);
+            AddGroup.EnteredBorderColor = Color.FromArgb(0, 98, 204);
+            AddGroup.EnteredColor = Color.FromArgb(0, 105, 217);
+            AddGroup.Font = new Font("Microsoft Sans Serif", 12F);
+            AddGroup.Image = null;
+            AddGroup.ImageAlign = ContentAlignment.MiddleLeft;
+            AddGroup.InactiveColor = Color.FromArgb(0, 123, 255);
+            AddGroup.Location = new Point(807, 519);
+            AddGroup.Name = "AddGroup";
+            AddGroup.PressedBorderColor = Color.FromArgb(0, 98, 204);
+            AddGroup.PressedColor = Color.FromArgb(0, 98, 204);
+            AddGroup.Size = new Size(94, 42);
+            AddGroup.TabIndex = 11;
+            AddGroup.Text = "Add Group";
+            AddGroup.TextAlignment = StringAlignment.Center;
+            // 
             // ConfigForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(30, 30, 30);
             ClientSize = new Size(924, 584);
-            Controls.Add(panel1);
-            Controls.Add(RunAtStartup);
             Controls.Add(AddGroup);
-            Controls.Add(linkLabel1);
-            Controls.Add(Foldericon);
             Controls.Add(ChangeLogPath);
             Controls.Add(ChangeWatchPath);
+            Controls.Add(panel1);
+            Controls.Add(RunAtStartup);
+            Controls.Add(linkLabel1);
+            Controls.Add(Foldericon);
             Controls.Add(Logpath);
             Controls.Add(Logfile);
             Controls.Add(Watchfolder);
@@ -239,14 +246,14 @@
         private Label Watchfolder;
         private Label Logfile;
         private Label Logpath;
-        private Button ChangeWatchPath;
-        private Button ChangeLogPath;
         private LinkLabel Foldericon;
         private LinkLabel linkLabel1;
-        private Button AddGroup;
         private CheckBox RunAtStartup;
         private Panel panel1;
         private FlowLayoutPanel flowLayoutPanel1;
         private GroupCard groupCard1;
+        private ReaLTaiizor.Controls.Button ChangeWatchPath;
+        private ReaLTaiizor.Controls.Button ChangeLogPath;
+        private ReaLTaiizor.Controls.Button AddGroup;
     }
 }

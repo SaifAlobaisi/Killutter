@@ -32,8 +32,8 @@
             Filetypes = new Label();
             Foldericon = new LinkLabel();
             Foldername = new Label();
-            Editbutton = new Button();
-            Deletebutton = new Button();
+            Editbutton = new ReaLTaiizor.Controls.Button();
+            Deletebutton = new ReaLTaiizor.Controls.Button();
             SuspendLayout();
             // 
             // Groupname
@@ -86,35 +86,41 @@
             // 
             // Editbutton
             // 
-            Editbutton.BackColor = Color.FromArgb(0, 123, 255);
-            Editbutton.FlatAppearance.BorderColor = Color.FromArgb(0, 64, 133);
-            Editbutton.FlatAppearance.BorderSize = 3;
-            Editbutton.FlatAppearance.MouseDownBackColor = Color.FromArgb(74, 74, 74);
-            Editbutton.FlatAppearance.MouseOverBackColor = Color.FromArgb(74, 74, 74);
-            Editbutton.FlatStyle = FlatStyle.Flat;
-            Editbutton.ForeColor = SystemColors.ControlText;
+            Editbutton.BackColor = Color.Transparent;
+            Editbutton.BorderColor = Color.FromArgb(0, 98, 204);
+            Editbutton.EnteredBorderColor = Color.FromArgb(0, 98, 204);
+            Editbutton.EnteredColor = Color.FromArgb(0, 105, 217);
+            Editbutton.Font = new Font("Microsoft Sans Serif", 12F);
+            Editbutton.Image = null;
+            Editbutton.ImageAlign = ContentAlignment.MiddleLeft;
+            Editbutton.InactiveColor = Color.FromArgb(0, 123, 255);
             Editbutton.Location = new Point(198, 98);
             Editbutton.Name = "Editbutton";
+            Editbutton.PressedBorderColor = Color.FromArgb(0, 98, 204);
+            Editbutton.PressedColor = Color.FromArgb(0, 98, 204);
             Editbutton.Size = new Size(94, 42);
-            Editbutton.TabIndex = 4;
+            Editbutton.TabIndex = 6;
             Editbutton.Text = "Edit";
-            Editbutton.UseVisualStyleBackColor = false;
-            Editbutton.Click += Editbutton_Click_1;
+            Editbutton.TextAlignment = StringAlignment.Center;
             // 
             // Deletebutton
             // 
-            Deletebutton.BackColor = Color.FromArgb(220, 53, 69);
-            Deletebutton.FlatAppearance.BorderColor = Color.FromArgb(114, 28, 36);
-            Deletebutton.FlatAppearance.BorderSize = 3;
-            Deletebutton.FlatAppearance.MouseDownBackColor = Color.FromArgb(74, 74, 74);
-            Deletebutton.FlatAppearance.MouseOverBackColor = Color.FromArgb(74, 74, 74);
-            Deletebutton.FlatStyle = FlatStyle.Flat;
+            Deletebutton.BackColor = Color.Transparent;
+            Deletebutton.BorderColor = Color.FromArgb(189, 33, 48);
+            Deletebutton.EnteredBorderColor = Color.FromArgb(189, 33, 48);
+            Deletebutton.EnteredColor = Color.FromArgb(200, 35, 51);
+            Deletebutton.Font = new Font("Microsoft Sans Serif", 12F);
+            Deletebutton.Image = null;
+            Deletebutton.ImageAlign = ContentAlignment.MiddleLeft;
+            Deletebutton.InactiveColor = Color.FromArgb(220, 53, 69);
             Deletebutton.Location = new Point(322, 98);
             Deletebutton.Name = "Deletebutton";
+            Deletebutton.PressedBorderColor = Color.FromArgb(189, 33, 48);
+            Deletebutton.PressedColor = Color.FromArgb(189, 33, 48);
             Deletebutton.Size = new Size(94, 42);
             Deletebutton.TabIndex = 6;
             Deletebutton.Text = "Delete";
-            Deletebutton.UseVisualStyleBackColor = false;
+            Deletebutton.TextAlignment = StringAlignment.Center;
             // 
             // GroupCard
             // 
@@ -142,7 +148,7 @@
         private Label Filetypes;
         private LinkLabel Foldericon;
         private Label Foldername;
-        private Button Editbutton;
-        private Button Deletebutton;
+        private ReaLTaiizor.Controls.Button Editbutton;
+        private ReaLTaiizor.Controls.Button Deletebutton;
     }
 }
