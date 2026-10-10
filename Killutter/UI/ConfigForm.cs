@@ -15,6 +15,9 @@ namespace Killutter.UI
             ChangeWatchPath.Click += ChangeWatchPath_Click;
             ChangeLogPath.Click += ChangeLogPath_Click;
             AddGroup.Click += AddGroup_Click;
+
+            addGroupControl1.SaveClicked += AddGroupControl1_SaveClicked;
+            addGroupControl1.CancelClicked += AddGroupControl1_CancelClicked;
         }
 
         private void ConfigForm_Load(object sender, EventArgs e)
@@ -95,9 +98,33 @@ namespace Killutter.UI
 
         private void AddGroup_Click(object sender, EventArgs e)
         {
-            AddGroupForm form = new AddGroupForm(config);
-            if (form.ShowDialog() == DialogResult.OK)
-                RefreshGroupList();
+            ShowAddGroup(true);
+        }
+
+        private void ShowAddGroup(bool show)
+        {
+            addGroupControl1.Visible = show;
+            flowLayoutPanel1.Visible = !show;
+            AddGroup.Enabled = !show;
+        }
+
+        private void AddGroupControl1_SaveClicked(object sender, EventArgs e)
+        {
+            config.AddGroup(
+                addGroupControl1.GetGroupName(),
+                addGroupControl1.GetDestinationPath(),
+                addGroupControl1.GetCheckedTypes());
+            config.Save();
+
+            addGroupControl1.Reset();
+            ShowAddGroup(false);
+            RefreshGroupList();
+        }
+
+        private void AddGroupControl1_CancelClicked(object sender, EventArgs e)
+        {
+            addGroupControl1.Reset();
+            ShowAddGroup(false);
         }
 
         protected override void OnFormClosing(FormClosingEventArgs e)

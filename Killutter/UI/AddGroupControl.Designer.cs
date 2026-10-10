@@ -400,6 +400,7 @@ namespace Killutter.UI
             NameTextBox.Name = "NameTextBox";
             NameTextBox.Size = new Size(300, 23);
             NameTextBox.TabIndex = 10;
+            NameTextBox.TextChanged += NameTextBox_TextChanged;
             // 
             // DestLabel
             // 
@@ -451,7 +452,7 @@ namespace Killutter.UI
             Save.Image = null;
             Save.ImageAlign = ContentAlignment.MiddleLeft;
             Save.InactiveColor = Color.FromArgb(0, 123, 255);
-            Save.Location = new Point(468, 430);
+            Save.Location = new Point(638, 430);
             Save.Name = "Save";
             Save.PressedBorderColor = Color.FromArgb(0, 98, 204);
             Save.PressedColor = Color.FromArgb(0, 98, 204);
@@ -470,7 +471,7 @@ namespace Killutter.UI
             CancelButton.Image = null;
             CancelButton.ImageAlign = ContentAlignment.MiddleLeft;
             CancelButton.InactiveColor = Color.FromArgb(220, 53, 69);
-            CancelButton.Location = new Point(579, 430);
+            CancelButton.Location = new Point(760, 430);
             CancelButton.Name = "CancelButton";
             CancelButton.PressedBorderColor = Color.FromArgb(189, 33, 48);
             CancelButton.PressedColor = Color.FromArgb(189, 33, 48);
@@ -499,7 +500,7 @@ namespace Killutter.UI
             Controls.Add(DestLabel);
             Controls.Add(DestValueLabel);
             Name = "AddGroupControl";
-            Size = new Size(700, 500);
+            Size = new Size(878, 509);
             DocumentsBox.ResumeLayout(false);
             DocumentsBox.PerformLayout();
             PicturesBox.ResumeLayout(false);

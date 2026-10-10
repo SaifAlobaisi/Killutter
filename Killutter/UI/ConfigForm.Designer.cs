@@ -37,6 +37,7 @@
             RunAtStartup = new CheckBox();
             panel1 = new Panel();
             flowLayoutPanel1 = new FlowLayoutPanel();
+            addGroupControl1 = new AddGroupControl();
             groupCard1 = new GroupCard();
             ChangeWatchPath = new ReaLTaiizor.Controls.Button();
             ChangeLogPath = new ReaLTaiizor.Controls.Button();
@@ -119,7 +120,7 @@
             RunAtStartup.AutoSize = true;
             RunAtStartup.Font = new Font("Segoe UI", 12F);
             RunAtStartup.ForeColor = Color.FromArgb(138, 138, 138);
-            RunAtStartup.Location = new Point(23, 527);
+            RunAtStartup.Location = new Point(23, 696);
             RunAtStartup.Name = "RunAtStartup";
             RunAtStartup.Size = new Size(130, 25);
             RunAtStartup.TabIndex = 14;
@@ -131,10 +132,11 @@
             // 
             panel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             panel1.BackColor = Color.FromArgb(24, 24, 24);
+            panel1.Controls.Add(addGroupControl1);
             panel1.Controls.Add(flowLayoutPanel1);
             panel1.Location = new Point(23, 147);
             panel1.Name = "panel1";
-            panel1.Size = new Size(878, 357);
+            panel1.Size = new Size(878, 509);
             panel1.TabIndex = 15;
             // 
             // flowLayoutPanel1
@@ -144,8 +146,18 @@
             flowLayoutPanel1.Dock = DockStyle.Fill;
             flowLayoutPanel1.Location = new Point(0, 0);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(878, 357);
+            flowLayoutPanel1.Size = new Size(878, 509);
             flowLayoutPanel1.TabIndex = 0;
+            // 
+            // addGroupControl1
+            // 
+            addGroupControl1.BackColor = Color.FromArgb(30, 30, 30);
+            addGroupControl1.Dock = DockStyle.Fill;
+            addGroupControl1.Location = new Point(0, 0);
+            addGroupControl1.Name = "addGroupControl1";
+            addGroupControl1.Size = new Size(878, 509);
+            addGroupControl1.TabIndex = 1;
+            addGroupControl1.Visible = false;
             // 
             // groupCard1
             // 
@@ -159,6 +171,7 @@
             // 
             // ChangeWatchPath
             // 
+            ChangeWatchPath.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             ChangeWatchPath.BackColor = Color.Transparent;
             ChangeWatchPath.BorderColor = Color.FromArgb(0, 98, 204);
             ChangeWatchPath.EnteredBorderColor = Color.FromArgb(0, 98, 204);
@@ -178,6 +191,7 @@
             // 
             // ChangeLogPath
             // 
+            ChangeLogPath.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             ChangeLogPath.BackColor = Color.Transparent;
             ChangeLogPath.BorderColor = Color.FromArgb(0, 98, 204);
             ChangeLogPath.EnteredBorderColor = Color.FromArgb(0, 98, 204);
@@ -205,7 +219,7 @@
             AddGroup.Image = null;
             AddGroup.ImageAlign = ContentAlignment.MiddleLeft;
             AddGroup.InactiveColor = Color.FromArgb(0, 123, 255);
-            AddGroup.Location = new Point(807, 519);
+            AddGroup.Location = new Point(807, 679);
             AddGroup.Name = "AddGroup";
             AddGroup.PressedBorderColor = Color.FromArgb(0, 98, 204);
             AddGroup.PressedColor = Color.FromArgb(0, 98, 204);
@@ -213,13 +227,14 @@
             AddGroup.TabIndex = 11;
             AddGroup.Text = "Add Group";
             AddGroup.TextAlignment = StringAlignment.Center;
+            AddGroup.Click += AddGroup_Click;
             // 
             // ConfigForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(30, 30, 30);
-            ClientSize = new Size(924, 584);
+            ClientSize = new Size(924, 736);
             Controls.Add(AddGroup);
             Controls.Add(ChangeLogPath);
             Controls.Add(ChangeWatchPath);
@@ -255,5 +270,6 @@
         private ReaLTaiizor.Controls.Button ChangeWatchPath;
         private ReaLTaiizor.Controls.Button ChangeLogPath;
         private ReaLTaiizor.Controls.Button AddGroup;
+        private AddGroupControl addGroupControl1;
     }
 }

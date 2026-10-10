@@ -3,6 +3,7 @@
     public partial class AddGroupControl : UserControl
     {
         private string destinationPath;
+        private string defaultDestText;
 
         public event EventHandler SaveClicked;
         public event EventHandler CancelClicked;
@@ -11,9 +12,25 @@
         {
             InitializeComponent();
 
+            defaultDestText = DestValueLabel.Text;
+
             Browse.Click += Browse_Click;
             Save.Click += Save_Click;
             CancelButton.Click += CancelButton_Click;
+        }
+
+        private CheckBox[] AllBoxes()
+        {
+            return new CheckBox[]
+            {
+        PdfCheck, DocxCheck, PptxCheck, XlsxCheck,
+        JpegCheck, PngCheck, GifCheck,
+        Mp3Check,
+        TxtCheck, CsvCheck, MdCheck, LogCheck,
+        JsonCheck, PyCheck, JsCheck,
+        ZipCheck, GzipCheck, JarCheck,
+        ExeCheck, ApkCheck
+            };
         }
 
         private void Browse_Click(object sender, EventArgs e)
@@ -69,25 +86,19 @@
         public List<string> GetCheckedTypes()
         {
             List<string> types = new List<string>();
-
-            CheckBox[] boxes =
-            {
-                PdfCheck, DocxCheck, PptxCheck, XlsxCheck,
-                JpegCheck, PngCheck, GifCheck,
-                Mp3Check,
-                TxtCheck, CsvCheck, MdCheck, LogCheck,
-                JsonCheck, PyCheck, JsCheck,
-                ZipCheck, GzipCheck, JarCheck,
-                ExeCheck, ApkCheck
-            };
-
-            foreach (CheckBox box in boxes)
-            {
+            foreach (CheckBox box in AllBoxes())
                 if (box.Checked)
                     types.Add(box.Text);
-            }
-
             return types;
+        }
+
+        public void Reset()
+        {
+            NameTextBox.Text = "";
+            destinationPath = null;
+            DestValueLabel.Text = defaultDestText;
+            foreach (CheckBox box in AllBoxes())
+                box.Checked = false;
         }
 
         private void Browse_Click_1(object sender, EventArgs e)
@@ -96,6 +107,11 @@
         }
 
         private void Save_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void NameTextBox_TextChanged(object sender, EventArgs e)
         {
 
         }
