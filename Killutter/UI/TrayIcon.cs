@@ -8,9 +8,10 @@ namespace Killutter.UI
         private Config config;
         private ConfigForm configForm;
 
-        public TrayIcon(Config config)
+        public TrayIcon(Config config, ConfigForm configForm = null)
         {
             this.config = config;
+            this.configForm = configForm;
 
             ContextMenuStrip menu = new ContextMenuStrip();
             menu.Items.Add("Settings", null, OnOpenSettings);
