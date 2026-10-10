@@ -89,5 +89,15 @@
 
             return types;
         }
+
+        private void Browse_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Save_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

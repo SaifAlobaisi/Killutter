@@ -105,5 +105,20 @@ namespace Killutter.UI
             e.Cancel = true;
             Hide();
         }
+
+        private void groupCard1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AddGroup_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ChangeWatchPath_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

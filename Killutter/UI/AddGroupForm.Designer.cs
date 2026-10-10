@@ -39,6 +39,7 @@
             addGroupControl1.Name = "addGroupControl1";
             addGroupControl1.Size = new Size(692, 494);
             addGroupControl1.TabIndex = 0;
+            addGroupControl1.Load += addGroupControl1_Load;
             // 
             // AddGroupForm
             // 

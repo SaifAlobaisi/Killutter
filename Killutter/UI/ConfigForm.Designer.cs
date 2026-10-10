@@ -89,8 +89,8 @@
             // ChangeWatchPath
             // 
             ChangeWatchPath.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            ChangeWatchPath.BackColor = Color.FromArgb(58, 58, 58);
-            ChangeWatchPath.FlatAppearance.BorderColor = Color.FromArgb(74, 74, 74);
+            ChangeWatchPath.BackColor = Color.FromArgb(0, 123, 255);
+            ChangeWatchPath.FlatAppearance.BorderColor = Color.FromArgb(0, 64, 133);
             ChangeWatchPath.FlatAppearance.BorderSize = 3;
             ChangeWatchPath.FlatAppearance.MouseDownBackColor = Color.FromArgb(74, 74, 74);
             ChangeWatchPath.FlatAppearance.MouseOverBackColor = Color.FromArgb(74, 74, 74);
@@ -101,12 +101,13 @@
             ChangeWatchPath.TabIndex = 7;
             ChangeWatchPath.Text = "Change...";
             ChangeWatchPath.UseVisualStyleBackColor = false;
+            ChangeWatchPath.Click += ChangeWatchPath_Click_1;
             // 
             // ChangeLogPath
             // 
             ChangeLogPath.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            ChangeLogPath.BackColor = Color.FromArgb(58, 58, 58);
-            ChangeLogPath.FlatAppearance.BorderColor = Color.FromArgb(74, 74, 74);
+            ChangeLogPath.BackColor = Color.FromArgb(0, 123, 255);
+            ChangeLogPath.FlatAppearance.BorderColor = Color.FromArgb(0, 64, 133);
             ChangeLogPath.FlatAppearance.BorderSize = 3;
             ChangeLogPath.FlatAppearance.MouseDownBackColor = Color.FromArgb(74, 74, 74);
             ChangeLogPath.FlatAppearance.MouseOverBackColor = Color.FromArgb(74, 74, 74);
@@ -148,8 +149,8 @@
             // AddGroup
             // 
             AddGroup.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            AddGroup.BackColor = Color.FromArgb(58, 58, 58);
-            AddGroup.FlatAppearance.BorderColor = Color.FromArgb(74, 74, 74);
+            AddGroup.BackColor = Color.FromArgb(0, 123, 255);
+            AddGroup.FlatAppearance.BorderColor = Color.FromArgb(0, 64, 133);
             AddGroup.FlatAppearance.BorderSize = 3;
             AddGroup.FlatAppearance.MouseDownBackColor = Color.FromArgb(74, 74, 74);
             AddGroup.FlatAppearance.MouseOverBackColor = Color.FromArgb(74, 74, 74);
@@ -160,6 +161,7 @@
             AddGroup.TabIndex = 11;
             AddGroup.Text = "Add Group";
             AddGroup.UseVisualStyleBackColor = false;
+            AddGroup.Click += AddGroup_Click_1;
             // 
             // RunAtStartup
             // 
@@ -203,6 +205,7 @@
             groupCard1.Name = "groupCard1";
             groupCard1.Size = new Size(429, 174);
             groupCard1.TabIndex = 0;
+            groupCard1.Load += groupCard1_Load;
             // 
             // ConfigForm
             // 

@@ -86,23 +86,25 @@
             // 
             // Editbutton
             // 
-            Editbutton.BackColor = Color.FromArgb(58, 58, 58);
-            Editbutton.FlatAppearance.BorderColor = Color.FromArgb(74, 74, 74);
+            Editbutton.BackColor = Color.FromArgb(0, 123, 255);
+            Editbutton.FlatAppearance.BorderColor = Color.FromArgb(0, 64, 133);
             Editbutton.FlatAppearance.BorderSize = 3;
             Editbutton.FlatAppearance.MouseDownBackColor = Color.FromArgb(74, 74, 74);
             Editbutton.FlatAppearance.MouseOverBackColor = Color.FromArgb(74, 74, 74);
             Editbutton.FlatStyle = FlatStyle.Flat;
+            Editbutton.ForeColor = SystemColors.ControlText;
             Editbutton.Location = new Point(198, 98);
             Editbutton.Name = "Editbutton";
             Editbutton.Size = new Size(94, 42);
             Editbutton.TabIndex = 4;
             Editbutton.Text = "Edit";
             Editbutton.UseVisualStyleBackColor = false;
+            Editbutton.Click += Editbutton_Click_1;
             // 
             // Deletebutton
             // 
-            Deletebutton.BackColor = Color.FromArgb(58, 58, 58);
-            Deletebutton.FlatAppearance.BorderColor = Color.FromArgb(74, 74, 74);
+            Deletebutton.BackColor = Color.FromArgb(220, 53, 69);
+            Deletebutton.FlatAppearance.BorderColor = Color.FromArgb(114, 28, 36);
             Deletebutton.FlatAppearance.BorderSize = 3;
             Deletebutton.FlatAppearance.MouseDownBackColor = Color.FromArgb(74, 74, 74);
             Deletebutton.FlatAppearance.MouseOverBackColor = Color.FromArgb(74, 74, 74);
@@ -114,7 +116,7 @@
             Deletebutton.Text = "Delete";
             Deletebutton.UseVisualStyleBackColor = false;
             // 
-            // UserControl1
+            // GroupCard
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -127,7 +129,7 @@
             Controls.Add(Groupname);
             Cursor = Cursors.No;
             ForeColor = SystemColors.ControlText;
-            Name = "UserControl1";
+            Name = "GroupCard";
             Size = new Size(457, 173);
             Load += UserControl1_Load;
             ResumeLayout(false);

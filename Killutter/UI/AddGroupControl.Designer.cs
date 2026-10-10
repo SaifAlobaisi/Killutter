@@ -424,8 +424,8 @@ namespace Killutter.UI
             // 
             // Save
             // 
-            Save.BackColor = Color.FromArgb(58, 58, 58);
-            Save.FlatAppearance.BorderColor = Color.FromArgb(74, 74, 74);
+            Save.BackColor = Color.FromArgb(0, 123, 255);
+            Save.FlatAppearance.BorderColor = Color.FromArgb(0, 64, 133);
             Save.FlatAppearance.BorderSize = 3;
             Save.FlatAppearance.MouseDownBackColor = Color.FromArgb(74, 74, 74);
             Save.FlatAppearance.MouseOverBackColor = Color.FromArgb(74, 74, 74);
@@ -436,11 +436,12 @@ namespace Killutter.UI
             Save.TabIndex = 16;
             Save.Text = "Save";
             Save.UseVisualStyleBackColor = false;
+            Save.Click += Save_Click_1;
             // 
             // CancelButton
             // 
-            CancelButton.BackColor = Color.FromArgb(58, 58, 58);
-            CancelButton.FlatAppearance.BorderColor = Color.FromArgb(74, 74, 74);
+            CancelButton.BackColor = Color.FromArgb(220, 53, 69);
+            CancelButton.FlatAppearance.BorderColor = Color.FromArgb(114, 28, 36);
             CancelButton.FlatAppearance.BorderSize = 3;
             CancelButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(74, 74, 74);
             CancelButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(74, 74, 74);
@@ -454,8 +455,8 @@ namespace Killutter.UI
             // 
             // Browse
             // 
-            Browse.BackColor = Color.FromArgb(58, 58, 58);
-            Browse.FlatAppearance.BorderColor = Color.FromArgb(74, 74, 74);
+            Browse.BackColor = Color.FromArgb(0, 123, 255);
+            Browse.FlatAppearance.BorderColor = Color.FromArgb(0, 64, 133);
             Browse.FlatAppearance.BorderSize = 3;
             Browse.FlatAppearance.MouseDownBackColor = Color.FromArgb(74, 74, 74);
             Browse.FlatAppearance.MouseOverBackColor = Color.FromArgb(74, 74, 74);
@@ -466,6 +467,7 @@ namespace Killutter.UI
             Browse.TabIndex = 18;
             Browse.Text = "Browse...";
             Browse.UseVisualStyleBackColor = false;
+            Browse.Click += Browse_Click_1;
             // 
             // AddGroupControl
             // 

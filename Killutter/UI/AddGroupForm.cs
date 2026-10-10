@@ -33,5 +33,10 @@ namespace Killutter.UI
             DialogResult = DialogResult.Cancel;
             Close();
         }
+
+        private void addGroupControl1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -74,5 +74,10 @@ namespace Killutter.UI
         {
 
         }
+
+        private void Editbutton_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
