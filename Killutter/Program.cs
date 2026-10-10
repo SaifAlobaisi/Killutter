@@ -23,11 +23,18 @@ namespace Killutter
                 Config config = Config.Load();
                 Logger.SetLogPath(config.GetLogPath());
 
+                ConfigForm configForm = null;
+                if (config.IsFirstRun())
+                {
+                    configForm = new ConfigForm(config);
+                    configForm.Show();
+                }
+
                 Watcher watcher = new Watcher(config);
                 Organizer.Sweep(config);
                 watcher.Start();
 
-                TrayIcon tray = new TrayIcon(config);
+                TrayIcon tray = new TrayIcon(config, configForm);
 
                 Application.Run();
             }

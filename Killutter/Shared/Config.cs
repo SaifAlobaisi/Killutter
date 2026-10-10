@@ -9,6 +9,9 @@ namespace Killutter.Shared
         public string LogPath = Path.Combine(Path.GetTempPath(), "Killutter.log");
         public List<Group> Groups = new List<Group>();
 
+        private bool firstRun;
+        public bool IsFirstRun() => firstRun;
+
         private static readonly string configPath = Path.Combine(
             Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "Killutter", "config.json");
 
@@ -17,12 +20,15 @@ namespace Killutter.Shared
             if (!File.Exists(configPath))
             {
                 Config defaultConfig = new Config();
+                defaultConfig.firstRun = true;
                 defaultConfig.Save();
                 return defaultConfig;
             }
 
             string json = File.ReadAllText(configPath);
-            return JsonSerializer.Deserialize<Config>(json, new JsonSerializerOptions { IncludeFields = true });
+            Config config = JsonSerializer.Deserialize<Config>(json, new JsonSerializerOptions { IncludeFields = true });
+            config.firstRun = false;
+            return config;
         }
 
         public void Save()
