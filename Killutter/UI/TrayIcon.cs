@@ -1,4 +1,7 @@
 ﻿using Killutter.Shared;
+using Microsoft.VisualBasic.ApplicationServices;
+using Microsoft.VisualBasic.Logging;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TrayNotify;
 
 namespace Killutter.UI
 {
@@ -18,7 +21,7 @@ namespace Killutter.UI
             menu.Items.Add("Exit", null, OnExit);
 
             notifyIcon = new NotifyIcon();
-            notifyIcon.Icon = SystemIcons.Application; // temp placeholder icon
+            notifyIcon.Icon = new Icon("Assets\\Icons\\Logo-NoBackground.ico"); // temp placeholder icon
             notifyIcon.Text = "Killutter";
             notifyIcon.Visible = true;
             notifyIcon.ContextMenuStrip = menu;

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConfigForm));
             Watchpath = new Label();
             Watchfolder = new Label();
             Logfile = new Label();
@@ -36,8 +37,8 @@
             linkLabel1 = new LinkLabel();
             RunAtStartup = new CheckBox();
             panel1 = new Panel();
-            flowLayoutPanel1 = new FlowLayoutPanel();
             addGroupControl1 = new AddGroupControl();
+            flowLayoutPanel1 = new FlowLayoutPanel();
             groupCard1 = new GroupCard();
             ChangeWatchPath = new ReaLTaiizor.Controls.Button();
             ChangeLogPath = new ReaLTaiizor.Controls.Button();
@@ -136,8 +137,18 @@
             panel1.Controls.Add(flowLayoutPanel1);
             panel1.Location = new Point(23, 147);
             panel1.Name = "panel1";
-            panel1.Size = new Size(878, 509);
+            panel1.Size = new Size(927, 509);
             panel1.TabIndex = 15;
+            // 
+            // addGroupControl1
+            // 
+            addGroupControl1.BackColor = Color.FromArgb(30, 30, 30);
+            addGroupControl1.Dock = DockStyle.Fill;
+            addGroupControl1.Location = new Point(0, 0);
+            addGroupControl1.Name = "addGroupControl1";
+            addGroupControl1.Size = new Size(927, 509);
+            addGroupControl1.TabIndex = 1;
+            addGroupControl1.Visible = false;
             // 
             // flowLayoutPanel1
             // 
@@ -146,18 +157,8 @@
             flowLayoutPanel1.Dock = DockStyle.Fill;
             flowLayoutPanel1.Location = new Point(0, 0);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(878, 509);
+            flowLayoutPanel1.Size = new Size(927, 509);
             flowLayoutPanel1.TabIndex = 0;
-            // 
-            // addGroupControl1
-            // 
-            addGroupControl1.BackColor = Color.FromArgb(30, 30, 30);
-            addGroupControl1.Dock = DockStyle.Fill;
-            addGroupControl1.Location = new Point(0, 0);
-            addGroupControl1.Name = "addGroupControl1";
-            addGroupControl1.Size = new Size(878, 509);
-            addGroupControl1.TabIndex = 1;
-            addGroupControl1.Visible = false;
             // 
             // groupCard1
             // 
@@ -180,7 +181,7 @@
             ChangeWatchPath.Image = null;
             ChangeWatchPath.ImageAlign = ContentAlignment.MiddleLeft;
             ChangeWatchPath.InactiveColor = Color.FromArgb(0, 123, 255);
-            ChangeWatchPath.Location = new Point(807, 21);
+            ChangeWatchPath.Location = new Point(856, 21);
             ChangeWatchPath.Name = "ChangeWatchPath";
             ChangeWatchPath.PressedBorderColor = Color.FromArgb(0, 98, 204);
             ChangeWatchPath.PressedColor = Color.FromArgb(0, 98, 204);
@@ -200,7 +201,7 @@
             ChangeLogPath.Image = null;
             ChangeLogPath.ImageAlign = ContentAlignment.MiddleLeft;
             ChangeLogPath.InactiveColor = Color.FromArgb(0, 123, 255);
-            ChangeLogPath.Location = new Point(807, 83);
+            ChangeLogPath.Location = new Point(856, 83);
             ChangeLogPath.Name = "ChangeLogPath";
             ChangeLogPath.PressedBorderColor = Color.FromArgb(0, 98, 204);
             ChangeLogPath.PressedColor = Color.FromArgb(0, 98, 204);
@@ -211,6 +212,7 @@
             // 
             // AddGroup
             // 
+            AddGroup.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             AddGroup.BackColor = Color.Transparent;
             AddGroup.BorderColor = Color.FromArgb(0, 98, 204);
             AddGroup.EnteredBorderColor = Color.FromArgb(0, 98, 204);
@@ -219,7 +221,7 @@
             AddGroup.Image = null;
             AddGroup.ImageAlign = ContentAlignment.MiddleLeft;
             AddGroup.InactiveColor = Color.FromArgb(0, 123, 255);
-            AddGroup.Location = new Point(807, 679);
+            AddGroup.Location = new Point(856, 679);
             AddGroup.Name = "AddGroup";
             AddGroup.PressedBorderColor = Color.FromArgb(0, 98, 204);
             AddGroup.PressedColor = Color.FromArgb(0, 98, 204);
@@ -234,7 +236,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(30, 30, 30);
-            ClientSize = new Size(924, 736);
+            ClientSize = new Size(973, 736);
             Controls.Add(AddGroup);
             Controls.Add(ChangeLogPath);
             Controls.Add(ChangeWatchPath);
@@ -246,6 +248,7 @@
             Controls.Add(Logfile);
             Controls.Add(Watchfolder);
             Controls.Add(Watchpath);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "ConfigForm";
             Text = "Killutter";
             Load += ConfigForm_Load;
